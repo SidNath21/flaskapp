@@ -1,11 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-import wolframalpha
-import speech_recognition as sr
-import time
-import playsound
-import os
-import random
-from gtts import gTTS
 
 app_id = "33VG95-JAGTLK5R9R"
 client = wolframalpha.Client(app_id)
