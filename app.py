@@ -1,8 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 
-app_id = "33VG95-JAGTLK5R9R"
-client = wolframalpha.Client(app_id)
-
 answers = []
 
 app = Flask(__name__)

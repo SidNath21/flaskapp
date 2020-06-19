@@ -31,16 +31,16 @@
 
         <h2 class="result"> Results </h2>
 
-        {%for i in range(0, 3)%} 
+        {%for ans in answers%} 
 
             <div class="ansDiv">
 
                 <p class="questionText">
-                    {{answers[i][0]}} 
+                    {{ans[0]}} 
                 </p>
 
                 <p class="ansText">
-                    {{answers[i][1]}}
+                    {{ans[1]}}
                 </p>
 
             </div>
