@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+import wolframalpha
 
 app_id = "33VG95-JAGTLK5R9R"
 client = wolframalpha.Client(app_id)
