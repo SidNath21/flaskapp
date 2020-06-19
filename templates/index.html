@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title> QUEST?ON </title>
+</head>
+
+<body>
+    <h1> Enter Your Question </h1>
+
+    <div class="border"> </div>
+
+    <div class="container">
+
+        <h2 class="title"> Question </h2>
+
+        <form action="/ans" method="POST">
+            <div>
+                <input type="text" name="question" placeholder="Question"><br>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+    <div class="answers">
+
+        <h2 class="result"> Results </h2>
+
+        {%for i in range(0, 3)%} 
+
+            <div class="ansDiv">
+
+                <p class="questionText">
+                    {{answers[i][0]}} 
+                </p>
+
+                <p class="ansText">
+                    {{answers[i][1]}}
+                </p>
+
+            </div>
+
+        {% endfor %}
+        
+           
+        
+
+    </div>
+    
+    
+    <button class="learn-btn"> Reset </button> 
+   
+
+    <script src="./static/index.js"></script>
+    <script type="text/javascript">
+
+        const resetButton = document.querySelector(".learn-btn");
+        resetButton.addEventListener("click", function(){
+           
+            let results = document.querySelectorAll(".ansDiv");
+            for(let i=0; i<results.length; i++){
+                results[i].parentElement.removeChild(results[i]);
+            }
+            
+            
+        });
+       
+
+    </script>
+
+</body>
+
+</html>
